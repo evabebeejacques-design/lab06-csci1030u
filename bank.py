@@ -16,15 +16,29 @@ def main():
         if choice == "1":
             # TODO: ask "Amount: ", read it as a float, add it to balance, then print
             #   "New balance: <balance>" with the balance shown to 2 decimal places.
-            pass
+            Amount = float(input("Amount : "))
+            New_Balance = Amount + (float(balance))
+            print(f"New Balance : {New_Balance:.2f}")
+            balance = New_Balance
+            return balance
+        
         elif choice == "2":
             # TODO: ask "Amount: " and read it as a float. If it is MORE than balance,
             #   print "Insufficient funds". Otherwise subtract it from balance and
             #   print "New balance: <balance>" (2 decimal places).
-            pass
+            Withdraw_amount = float(input("Amount : "))
+            if (Withdraw_amount > balance):
+                print("Insufficient funds")
+            else:
+                balance = balance - Withdraw_amount
+                print(f"New Balance : {balance:.2f}")
+            return balance
+        
         elif choice == "3":
             # TODO: print "Current balance: <balance>" (2 decimal places).
-            pass
+            print(f"Current Balance : {balance:.2f}")
+            return balance
+        
         elif choice == "4":
             print("Goodbye")
             break
